@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModel
 import tech.zymx.photoeveryday.MyApplication
 import tech.zymx.photoeveryday.R
 import tech.zymx.photoeveryday.UIActionType
+import tech.zymx.photoeveryday.formatTimestamp
 import tech.zymx.photoeveryday.model.TileModel
 import tech.zymx.photoeveryday.model.UIActionModel
 import tech.zymx.photoeveryday.repo.TileRepo
@@ -64,12 +65,11 @@ class TileListViewModel(application: Application) : AndroidViewModel(application
 
 }
 
-class TileViewModel(model: TileModel) : ViewModel() {
-    val model = model
+class TileViewModel(val model: TileModel) : ViewModel() {
 
     val coverUrl = MutableLiveData<String>(model.coverUrl)
     val tileTitle: MutableLiveData<String> = MutableLiveData(model.title)
-    val tileUpdateTime: MutableLiveData<String> = MutableLiveData("2019-12-2 23:22")
+    val tileUpdateTime: MutableLiveData<String> = MutableLiveData(formatTimestamp(model.updateTime))
 
 }
 

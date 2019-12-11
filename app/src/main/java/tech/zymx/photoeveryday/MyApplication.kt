@@ -9,6 +9,15 @@ import tech.zymx.photoeveryday.repo.TileRepo
 class MyApplication: Application() {
     override fun onCreate() {
         super.onCreate()
+        sInstance = this
         TileRepo.initDatabase(this)
+    }
+
+    companion object {
+        private lateinit var sInstance: MyApplication
+
+        fun g(): MyApplication {
+            return sInstance
+        }
     }
 }
