@@ -66,6 +66,9 @@ class AddTileActivity : AppCompatActivity() {
                     }
                     false
                 }
+                binding.toolbar.setNavigationOnClickListener {
+                    finish()
+                }
 
                 viewModel.coverPath.observe(this, Observer {
                     binding.ivAddLogo.visibility = View.GONE

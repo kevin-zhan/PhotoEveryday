@@ -63,6 +63,4 @@ class TileAdapter : RecyclerView.Adapter<TileViewHolder>() {
 
 }
 
-class TileViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
-}
+class TileViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
