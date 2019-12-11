@@ -2,4 +2,17 @@
     <string name="app_name">图记</string>
     <string name="cover_img">封面图片</string>
     <string name="add">Add</string>
+    <string name="add_cover_photo">添加照片</string>
+    <string name="tile_title">坚持的事：</string>
+    <string name="write_title">输入标题</string>
+    <string name="insist_on">坚持一件事</string>
+    <string name="pls_complete_info">请先完善信息</string>
+    <string name="suc_add">添加成功</string>
+    <string name="confirm_delete_wording">确定删除该项吗？</string>
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="word_ok">OK</string>
+    <string name="permission_apply">权限申请</string>
+    <string name="write_file_permission">需要访问相册来获取封面</string>
+    <string name="delete_done">删除成功</string>
 </resources>

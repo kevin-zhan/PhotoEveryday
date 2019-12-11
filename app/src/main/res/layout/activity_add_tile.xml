@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="viewModel"
+            type="tech.zymx.photoeveryday.viewmodel.TileAddViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            app:titleTextColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="20dp"
+            android:text="@string/tile_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <EditText
+            android:id="@+id/et_tile_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/write_title"
+            android:inputType="text"
+            android:text="@={viewModel.tileTitle}"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_title_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_title_label"
+            android:importantForAutofill="no" />
+
+        <ImageView
+            android:id="@+id/iv_cover_preview"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:background="#11000000"
+            android:contentDescription="@string/add_cover_photo"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_label" />
+
+        <ImageView
+            android:id="@+id/iv_add_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_placeholder_add"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_cover_preview"
+            app:layout_constraintEnd_toEndOf="@+id/iv_cover_preview"
+            app:layout_constraintStart_toStartOf="@+id/iv_cover_preview"
+            app:layout_constraintTop_toTopOf="@+id/iv_cover_preview" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
