@@ -40,13 +40,12 @@ class AddTileActivity : AppCompatActivity() {
                     )
                     startActivityForResult(intent, REQUEST_CODE_PHOTO_LIBRARY)
                 }
-                actionModel.actionType == UIActionType.UI_ACTION_SHOW_TOAST -> Toast.makeText(
-                    this,
-                    actionModel.getExtraData() as String,
-                    Toast.LENGTH_SHORT
-                )
-                    .show()
                 actionModel.actionType == UIActionType.UI_ACTION_ADD_DONE -> {
+                    Toast.makeText(
+                        this,
+                        R.string.suc_add,
+                        Toast.LENGTH_SHORT
+                    ).show()
                     setResult(Activity.RESULT_OK)
                     finish()
                 }

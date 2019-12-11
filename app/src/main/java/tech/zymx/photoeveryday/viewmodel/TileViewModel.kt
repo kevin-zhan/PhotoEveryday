@@ -102,12 +102,6 @@ class TileAddViewModel(application: Application) : AndroidViewModel(application)
             TileRepo.tileDatabase?.tileDao()?.insert(tileModel)
 
             uiAction.postValue(UIActionModel(UIActionType.UI_ACTION_ADD_DONE))
-
-            uiAction.postValue(object : UIActionModel(UIActionType.UI_ACTION_SHOW_TOAST) {
-                override fun getExtraData(): String {
-                    return getApplication<MyApplication>().getString(R.string.suc_add)
-                }
-            })
         }
     }
 

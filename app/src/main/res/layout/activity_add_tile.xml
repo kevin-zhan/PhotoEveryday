@@ -45,12 +45,20 @@
             app:layout_constraintStart_toEndOf="@+id/tv_title_label"
             android:importantForAutofill="no" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:text="@string/select_cover_wording"
+            app:layout_constraintBottom_toTopOf="@+id/iv_cover_preview"
+            app:layout_constraintStart_toStartOf="@+id/iv_cover_preview" />
+
         <ImageView
             android:id="@+id/iv_cover_preview"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginEnd="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             android:background="#11000000"
             android:contentDescription="@string/add_cover_photo"
             android:scaleType="centerCrop"

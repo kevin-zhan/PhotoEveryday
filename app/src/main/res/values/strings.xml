@@ -15,4 +15,5 @@
     <string name="permission_apply">权限申请</string>
     <string name="write_file_permission">需要访问相册来获取封面</string>
     <string name="delete_done">删除成功</string>
+    <string name="select_cover_wording">选个封面：</string>
 </resources>
