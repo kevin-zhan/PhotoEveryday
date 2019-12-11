@@ -24,6 +24,18 @@ class TileListViewModel(application: Application) : AndroidViewModel(application
         })
     }
 
+    fun addData() {
+        val model = TileModel()
+        model.coverUrl = "https://qzonestyle.gtimg.cn/aoi/sola/20191105163912_ONRjyZUKh8.png"
+        // https://qzonestyle.gtimg.cn/aoi/sola/20181127110559_k8L8vATJwx.png
+        model.title = "每天读书"
+        model.updateTime = "2019-12-10 21:00"
+        val viewModel = TileViewModel(model)
+        tileListViewModel.postValue(tileListViewModel.value.also {
+            it?.add(viewModel)
+        })
+    }
+
 }
 
 class TileViewModel(model: TileModel) : ViewModel() {

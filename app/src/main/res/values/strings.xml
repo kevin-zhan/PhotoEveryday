@@ -1,4 +1,5 @@
 <resources>
-    <string name="app_name">PhotoEveryday</string>
+    <string name="app_name">图记</string>
     <string name="cover_img">封面图片</string>
+    <string name="add">Add</string>
 </resources>

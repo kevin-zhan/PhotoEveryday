@@ -18,7 +18,7 @@ class TileAdapter : RecyclerView.Adapter<TileViewHolder>() {
         DataBindingUtil.inflate<ItemTileBinding>(
             LayoutInflater.from(parent.context),
             R.layout.item_tile,
-            null,
+            parent,
             false
         ).let {
             return TileViewHolder(it.root)
